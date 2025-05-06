@@ -1,4 +1,4 @@
-<nav class="app-header navbar navbar-expand bg-body">
+   <nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Start Navbar Links-->
@@ -194,4 +194,5 @@
           <!--end::End Navbar Links-->
         </div>
         <!--end::Container-->
-</nav>
+      </nav>
+      <!--end::Header-->
