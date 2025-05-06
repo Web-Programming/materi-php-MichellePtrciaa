@@ -1,5 +1,4 @@
-<div>
-    <nav class="app-header navbar navbar-expand bg-body">
+<nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Start Navbar Links-->
@@ -182,6 +181,12 @@
                   <!--end::Row-->
                 </li>
                 <!--end::Menu Body-->
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                </li>
+                <!--end::Menu Footer-->
               </ul>
             </li>
             <!--end::User Menu Dropdown-->
@@ -189,6 +194,4 @@
           <!--end::End Navbar Links-->
         </div>
         <!--end::Container-->
-      </nav>
-      <!--end::Header-->
-</div>
+</nav>

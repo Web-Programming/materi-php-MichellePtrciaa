@@ -11,6 +11,104 @@
 <body>
     <!-- ini bagian header-->
     @include('layout.header')
+      <li class="nav-header">EXAMPLES</li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                  <p>
+                    Auth
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                      <p>
+                        Version 1
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="../examples/login.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Login</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="../examples/register.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Register</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                      <p>
+                        Version 2
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="../examples/login-v2.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Login</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="../examples/register-v2.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Register</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../examples/lockscreen.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Lockscreen</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-header">DOCUMENTATIONS</li>
+              <li class="nav-item">
+                <a href="../docs/introduction.html" class="nav-link">
+                  <i class="nav-icon bi bi-download"></i>
+                  <p>Installation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../docs/layout.html" class="nav-link">
+                  <i class="nav-icon bi bi-grip-horizontal"></i>
+                  <p>Layout</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../docs/color-mode.html" class="nav-link">
+                  <i class="nav-icon bi bi-star-half"></i>
+                  <p>Color Mode</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-ui-checks-grid"></i>
+                  <p>
+                    Components
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../docs/components/main-header.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Main Header</p>
+                    </a>
+                  </li>
     <!-- ini bagian sidebar-->
     @include('layout.header')
      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
@@ -562,6 +660,11 @@
       </main>
     <!-- ini bagian footer-->
     @include('layout.footer')
+        <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item dropdown-footer"> See All Notifications </a>
+        <div class="card-footer">Footer</div>
 
 </body>
 <script
