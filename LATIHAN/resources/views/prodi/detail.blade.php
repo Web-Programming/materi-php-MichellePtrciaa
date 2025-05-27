@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', "Halaman List Prodi")
+@section('title', "Halaman Detail Prodi")
 
 @section('content')
         <!--begin::App Content Header-->
@@ -13,7 +13,8 @@
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="{{ url("/") }}">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Program Studi</li>
+                  <li class="breadcrumb-item"><a href="{{ url("/prodi") }}">Program Studi</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Detail Program Studi</li>
                 </ol>
               </div>
             </div>
@@ -32,7 +33,7 @@
                 <!-- Default box -->
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Program Studi</h3>
+                    <h3 class="card-title">Detail Program Studi</h3>
                     <div class="card-tools">
                       <button
                         type="button"
@@ -54,52 +55,13 @@
                     </div>
                   </div>
                   <div class="card-body">
-                    <a href="{{ url('prodi/create') }}" class="btn btn-success" >Buat Prodi Baru</a>
-
-                    @if (session('status'))
-                      <div class="alert alert-success">
-                          {{ session('status') }}
-                      </div>
-                    @endif
                     
-                    <table class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>No</th>
-                          <th>Nama Prodi</th>
-                          <th>Kode Prodi</th>
-                          <th>Logo</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        @foreach ( $listprodi as $prodi)
-                          <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $prodi->nama }}</td>
-                            <td>{{ $prodi->kode_prodi }}</td>
-                            <td>{{ $prodi->logo }}
-                              @if ($prodi->logo)
-                                <img src="{{ asset('images/'.$prodi->logo) }}" alt="" width="100px">
-                              @else
-                                <p>Logo tidak ada</p>
-                              @endif
-                            </td>
-                            <td>
-                              
-                              <form action="{{ url('prodi/'.$prodi->id) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <a href="{{ url('prodi/'.$prodi->id) }}" class="btn btn-link" >Detail</a>
-                                <a href="{{ url('prodi/'.$prodi->id.'/edit') }}"  class="btn btn-link" >Edit</a>
-                                <button type="submit" class="btn btn-link">Delete</button>
-                              </form>
-                            </td>
-                          </tr>
-                        @endforeach
-                      </tbody>                 
-                    </table>
-
+                    ID Prodi : {{ $prodi->id }} <br>
+                    Nama Prodi : {{ $prodi->nama }} <br>
+                    Kode Prodi : {{ $prodi->kode_prodi }} <br>
+                    Tanggal Buat : {{ $prodi->created_at }} <br>
+                    Tanggal Update : {{ $prodi->updated_at }} <br>
+                    
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">Footer</div>
